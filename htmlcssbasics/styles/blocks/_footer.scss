@@ -1,0 +1,44 @@
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--transparent-accent-color);
+  font-weight: 700;
+  font-size: 14px;
+  @include mobile {
+    padding-top: 120px;
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 120px;
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+  }
+  &__nav-flex-item:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  &__nav-flex-item {
+    @include mobile {
+      width: 300px;
+      text-align: center;
+    }
+  }
+  &__icons {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+  }
+  &__list-head {
+    color: var(--text-color);
+    margin-bottom: 32px;
+  }
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}

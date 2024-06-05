@@ -1,0 +1,74 @@
+@mixin button {
+  width: 200px;
+  height: 50px;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  text-align: center;
+  border-radius: var(--button-border-radius);
+  border: none;
+}
+@mixin heading-button {
+  background-color: var(--heading-button-background);
+  border: 1px solid rgba(171, 163, 163, 0.2);
+}
+@mixin wrapper {
+  max-width: 1164px;
+  margin-inline: auto;
+}
+@mixin img($width) {
+  display: block;
+  width: #{$width}px;
+  height: auto;
+  object-fit: cover;
+}
+@mixin card-head {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--card-head-color);
+}
+@mixin card-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--card-text-color);
+}
+@mixin section-head {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--card-head-color);
+  span {
+    color: var(--accent-color);
+  }
+}
+@mixin section-subhead {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--section-heading-color);
+}
+@mixin main-section-cards {
+  color: var(--card-text-color);
+  a {
+    color: var(--accent-color);
+    font-size: 18px;
+    font-weight: 800;
+    position: relative;
+    &::after {
+      content: url("../../images/icon.svg");
+      position: absolute;
+      left: 120px;
+      top: 1px;
+    }
+  }
+}
+
+@mixin card-decoration {
+  & {
+    position: relative;
+  }
+  &::before {
+    content: url("../images/card-decoration.svg");
+    position: absolute;
+    z-index: -100;
+    top: -45px;
+    left: -45px;
+  }
+}

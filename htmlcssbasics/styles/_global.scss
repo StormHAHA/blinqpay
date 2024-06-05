@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: var(--text-color);
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 400;
+  background-color: var(--text-color);
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+ol {
+  list-style: none;
+}
+h1 {
+  font-weight: 800;
+  font-size: 54px;
+}
+h2 {
+  font-size: 40px;
+  font-weight: 800;
+}
+button:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,98 @@
+.header {
+  height: 100vh;
+  background-image: url("../images/heading-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-color: var(--background-color);
+
+  &__nav-bar {
+    padding-top: 33px;
+    @include flex-row;
+  }
+  &__nav-list,
+  &__nav-actions {
+    @include flex-row;
+    gap: 38px;
+  }
+  &__action-button {
+    font-weight: 700;
+    color: inherit;
+  }
+  &__action-button.white {
+    background: none;
+    border: none;
+    height: 43px;
+  }
+  &__action-button.yellow {
+    background: var(--secondary-color);
+    border: none;
+    width: 130px;
+    height: 43px;
+    border-radius: 96px;
+  }
+  &__list-item {
+    a {
+      display: flex;
+      height: 49px;
+      align-items: center;
+    }
+  }
+  &__header__nav-bar-open-btn,
+  &__header__nav-bar-close-btn {
+    background: none;
+  }
+  &__mobile-nav {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: var(--accent-color);
+    z-index: 1000;
+    border-radius: var(--button-border-radius);
+  }
+
+  &__nav-list-mobie {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    padding: 16px;
+  }
+
+  &__nav-bar-open-btn {
+    display: none;
+  }
+  @include desktop {
+    &__nav-bar {
+      margin: 0 8px 0 8px;
+    }
+  }
+  @include tablet {
+    &__nav-list {
+      gap: 24px;
+    }
+    &__nav-actions {
+      gap: 16px;
+    }
+    &__logo {
+      img {
+        width: 140px;
+      }
+    }
+    &__nav-list,
+    &__nav-actions {
+      display: none;
+    }
+    &__nav-bar-open-btn {
+      display: block;
+    }
+  }
+  @include tablet-above {
+    &__mobile-nav {
+      display: none !important;
+    }
+  }
+  @include mobile {
+  }
+}

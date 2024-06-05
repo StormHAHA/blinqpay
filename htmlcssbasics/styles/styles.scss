@@ -1,0 +1,7 @@
+@import "fonts", "normalize", "variables", "utils", "global", "media", "mixins";
+@import "blocks/header", "blocks/heading-info", "blocks/advantages",
+  "blocks/supports", "blocks/why-us", "blocks/feedback", "blocks/banner",
+  "blocks/footer";
+.wrapper {
+  @include wrapper;
+}

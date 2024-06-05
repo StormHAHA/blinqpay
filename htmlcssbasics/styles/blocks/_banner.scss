@@ -1,0 +1,22 @@
+.banner {
+  transform: translateY(-50%);
+  @include mobile {
+    display: none;
+  }
+  &__text {
+    @include section-head;
+  }
+  &__btn {
+    @include button;
+  }
+  &__inner {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 94%;
+    height: 182px;
+    border-radius: var(--button-border-radius);
+    background-color: var(--text-color);
+  }
+}
